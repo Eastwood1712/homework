@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //     •	13. Объединить два массива без дублирования элементов
+        // Напишите функцию union, которая возвращает массив состоящий только из уникальных элементов из каждого массива.
+        // var array1 = [5, 2, 1, -10, 8];
+        // var array2 = [5, 2, 1, -9, 3, 7]; 
+
+        function union() {
+            let arr1 = [5, 2, 1, -10, 8]
+            let arr2 = [5, 2, 1, -9, 3, 7]
+            let done = arr1.concat(arr2.splice(3, 3))
+            alert(done)
+        }
+        union()
+
+    </script>
+
+    <script>
+        //     •	14. Разница между двумя массивами
+        // Напишите функцию union, которая возвращает массив, содержащий все элементы arr1, которые не находятся в arr2 и наоборот.
+        // var arr1 = [1, 2, 'a'];
+        // var arr2 = [1, 2, 3, 4, 'b'];  
+
+
+        // document.writeln(arrayDiff(arr1, arr2)); // [a,3,4,b]
+
+        function united() {
+
+            let ar1 = [1, 2, 'a']
+            let ar2 = [1, 2, 3, 4, 'b']
+
+            let res = ar1.splice(2, 1).concat(ar2.splice(2, 3))
+            alert(res)
+        }
+        united()
+    </script>
+
+    <script>
+        // •	15. Сортировка массива по убыванию
+        // Напишите функцию compareNumbers(arr), которая возвращает массив, элементы которого отсортированы по убыванию их значений.
+        // var numbers = [3, 8, 7, 6, 5, -4, 3, 2, 1];  
+
+        // compareNumbers(numbers); // -4,1,2,3,3,5,6,7,8
+
+        function compareNumbers(num1, num2) {
+            if (num1 > num2)
+                return 1
+            else
+                if (num1 < num2)
+                    return -1
+                else
+                    return 0
+        }
+        let total = [3, 8, 7, 6, 5, -4, 3, 2, 1]
+        total.sort(compareNumbers)
+        alert(total)
+
+    </script>
+
+    <script>
+        // •	18. Сумма и произведение значений массива
+        // Напишите код, который определяет сумму и произведение значений массива.
+        // var arr = [ 1, 2 , 3 , 4 , 5 , 6 , 7, 8 ,9];
+
+        //      ...ваш код...
+
+        // document.writeln(" Сумма : "+sum + "Произведение : " + product); /* Сумма : 45
+        //                                      Произведение : 362880 */
+
+
+        function calc() {
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+            let count = arr.reduce(function (a, b) {
+                return a + b
+            })
+            let multiplication = arr.reduce(function (a, b) {
+                return a * b
+            })
+
+            alert("Сума:" + count + "\r" + "Добуток: " + multiplication)
+        }
+        calc()
+
+
+
+    </script>
+
+    
+
+</body>
+
+</html>
